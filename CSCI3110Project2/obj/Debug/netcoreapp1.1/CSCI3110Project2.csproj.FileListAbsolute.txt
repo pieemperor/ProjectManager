@@ -1,0 +1,10 @@
+C:\Users\student\Desktop\CSCI3110Project2\CSCI3110Project2\bin\Debug\netcoreapp1.1\CSCI3110Project2.deps.json
+C:\Users\student\Desktop\CSCI3110Project2\CSCI3110Project2\bin\Debug\netcoreapp1.1\CSCI3110Project2.runtimeconfig.json
+C:\Users\student\Desktop\CSCI3110Project2\CSCI3110Project2\bin\Debug\netcoreapp1.1\CSCI3110Project2.runtimeconfig.dev.json
+C:\Users\student\Desktop\CSCI3110Project2\CSCI3110Project2\obj\Debug\netcoreapp1.1\CSCI3110Project2.csprojResolveAssemblyReference.cache
+C:\Users\student\Desktop\CSCI3110Project2\CSCI3110Project2\obj\Debug\netcoreapp1.1\CSCI3110Project2.csproj.CoreCompileInputs.cache
+C:\Users\student\Desktop\CSCI3110Project2\CSCI3110Project2\obj\Debug\netcoreapp1.1\CSCI3110Project2.AssemblyInfo.cs
+C:\Users\student\Desktop\CSCI3110Project2\CSCI3110Project2\bin\Debug\netcoreapp1.1\CSCI3110Project2.dll
+C:\Users\student\Desktop\CSCI3110Project2\CSCI3110Project2\bin\Debug\netcoreapp1.1\CSCI3110Project2.pdb
+C:\Users\student\Desktop\CSCI3110Project2\CSCI3110Project2\obj\Debug\netcoreapp1.1\CSCI3110Project2.dll
+C:\Users\student\Desktop\CSCI3110Project2\CSCI3110Project2\obj\Debug\netcoreapp1.1\CSCI3110Project2.pdb

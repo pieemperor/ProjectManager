@@ -1,0 +1,48 @@
+@model IEnumerable<CSCI3110Project2.Models.ViewModels.ProjectGroupVM>
+
+    @{
+        ViewData["Title"] = "All Projects Grouped by Project";
+    }
+
+    <h2>All Projects</h2>
+    @{
+
+        foreach (var project in Model)
+        {
+            <h3>@project.ProjectName</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Role
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in project.ProjectRoles)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Person.FirstName)<span> </span>
+                                @Html.DisplayFor(modelItem => item.Person.LastName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Role.Name)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Change Role", "EditRole", new { personId = item.PersonId, projectId = item.ProjectId, roleId = item.RoleId }) |
+                                @Html.ActionLink("Remove From Project", "RemoveFromProject", new { personId = item.PersonId, projectId = item.ProjectId, roleId = item.RoleId})
+                            </td>
+
+                        </tr>
+}
+                </tbody>
+            </table>
+        }
+
+    }
+

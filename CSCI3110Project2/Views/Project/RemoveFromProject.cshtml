@@ -1,0 +1,43 @@
+@model CSCI3110Project2.Models.ViewModels.RemoveFromProjectVM
+
+@{
+    ViewData["Title"] = "RemoveFromProject";
+}
+
+<h2>RemoveFromProject</h2>
+
+<h3>Are you sure you want to remove this person from the project?</h3>
+<div>
+    <h4>RemoveFromProjectVM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Project)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Role)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Role)
+        </dd>
+    </dl>
+    
+    <form asp-action="RemoveFromProject">
+        <div class="form-actions no-color">
+            <input type="hidden" name="personId" value=@Model.PersonId />
+            <input type="hidden" name="projectId" value=@Model.ProjectId />
+            <input type="hidden" name="roleId" value=@Model.RoleId />
+            <input type="submit" value="Remove" class="btn btn-default" /> |
+            <a asp-action="Index">Back to Projects</a>
+        </div>
+    </form>
+</div>

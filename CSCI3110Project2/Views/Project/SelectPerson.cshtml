@@ -1,0 +1,42 @@
+@model CSCI3110Project2.Models.ViewModels.SelectPersonVM
+
+@{
+    ViewData["Title"] = "Person Selection";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>Selected Project: @Model.ProjectId</h3>
+
+<form asp-action="AssignToProject">
+    <div class="form-horizontal">
+
+        <input type="hidden" name="projectId" value="@Model.ProjectId" />
+
+        <div class="form-group">
+            <label for="personId" class="control-label col-md-2">Select a Person:</label>
+            <div class="col-md-10">
+                <select name="personId" id="personId" class="form-control">
+                    @foreach (var person in Model.PersonNames)
+                    {
+                        <option value="@person.Id">@person.Name</option>}
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="roleId" class="control-label col-md-2">Select a Role:</label>
+            <div class="col-md-10">
+                <select name="roleId" id="roleId" class="form-control">
+                    @foreach (var role in Model.RoleNames)
+                    {
+                        <option value="@role.Id">@role.Name</option>}
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Assign to Project" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>

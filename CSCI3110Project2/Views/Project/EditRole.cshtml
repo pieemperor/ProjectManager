@@ -1,0 +1,35 @@
+@model CSCI3110Project2.Models.ViewModels.UpdateProjectRoleVM
+
+@{
+    ViewData["Title"] = "Person Selection";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>Selected Project: @Model.ProjectName</h3>
+<h3>Selected Person: @Model.PersonName</h3>
+<h3>Current Role: @Model.RoleName</h3>
+
+
+<form asp-action="EditRole">
+    <div class="form-horizontal">
+
+        <input type="hidden" name="projectId" value="@Model.ProjectId" />
+        <input type="hidden" name="personId" value="@Model.PersonId" />
+
+        <div class="form-group">
+            <label for="roleId" class="control-label col-md-2">Select a Role:</label>
+            <div class="col-md-10">
+                <select name="roleId" id="roleId" class="form-control">
+                    @foreach (var role in Model.RoleNames)
+                    {
+                        <option value="@role.Id">@role.Name</option>}
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Update Role" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
